@@ -1,0 +1,22 @@
+{
+	"name": "DARS for Dummies",
+	"version": "0.7",
+	"manifest_version": 2,
+
+	"description": "Are you a dummy?",
+
+	"homepage_url": "http://darsfordummies.web.engr.illinois.edu",
+
+	"options_page": "preferences.html",
+	"content_scripts": [
+		{
+			"matches": ["*://localhost/dars/*", "https://darsweb.admin.uillinois.edu/darswebstu_uiuc/ParseAudit.jsp?*"],
+			"run_at": "document_idle",
+			"js": ["parseAudit.js"]
+		}
+	],
+	"permissions": [
+		"https://darsweb.admin.uillinois.edu/darswebstu_uiuc/ParseAudit.jsp?*",
+		"http://darsfordummies.web.engr.illinois.edu/*"
+	]
+}

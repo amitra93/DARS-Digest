@@ -1,0 +1,14 @@
+create table report(uin int(10) unsigned not null, timestamp datetime not null, major varchar(255) not null, primaryGroup varchar(255) not null, primaryHrs tinyint(3) unsigned null, secondaryCourse tinyint(3) unsigned null, secondaryGroup varchar(255) null, secondaryHrs tinyint(3) unsigned null, secondaryCourseOpts text null, unique key (uin, timestamp, primaryGroup, secondaryGroup));
+alter table report add column primaryCourse tinyint unsigned after primaryHrs;
+
+create table courseopts(uin int(10) unsigned NOT NULL, primaryGroup varchar(255) NOT NULL, secondaryGroup varchar(255) NULL, courseOpts varchar(255), unique key (uin, primaryGroup, secondaryGroup, courseOpts));
+
+create table taken(uin int(10) unsigned NOT NULL, courseName varchar(10) NOT NULL, inProgress bool default 0, primary key (uin, courseName));
+
+preferences_per_req table schema:
+	record_ID (PRIMARY KEY)
+	primary_public
+	primary.needsHour_public
+	secondary.group_public
+	secondary.needsCourse_public
+	secondary.courseOpts_public

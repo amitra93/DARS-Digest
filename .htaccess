@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond    %{REQUEST_URI}    !^(.+)\.[a-zA-Z0-9]+$
+RewriteRule    ^(.+)$    $1.php    [NC,L]
+
+ErrorDocument 404 /404

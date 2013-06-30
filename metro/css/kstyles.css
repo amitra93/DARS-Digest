@@ -1,0 +1,52 @@
+#profile_head {
+	width: 750px;
+	clear: both;
+	margin-left: 119px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid black;
+}
+#profile_picture {
+	float: left;
+}
+
+#profile_name {
+	font-size: 1.5em;
+}
+
+#profile_info {
+	float: left;
+	display: inline;
+	padding-left: 25px;
+}
+
+#course_options {
+	width: 750px;
+	margin-left: 119px;
+}
+
+#header_img {
+	padding-top: 5px;
+}
+
+.req_toggle {
+	display: inline;
+	float: right;
+	width:10px;
+	margin: 10px;
+}
+
+.bold-this {
+	font-size: 1.3em;
+	cursor: pointer;
+}
+
+.contain {
+	margin-left: 119px;
+}
+
+.pub {
+	float: right;
+	margin-right: 7px;
+	color: #777;
+}
